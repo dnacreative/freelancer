@@ -1,0 +1,46 @@
+// Colors
+// ================================================
+	$link: #1769FF;
+	$hover: #1769FF;
+	$base: darken(white, 80%);
+	$red: red;
+	$green: green;
+	$grey: darken(white, 30%);
+	$lightgrey: darken(white, 20%);
+
+	$dribbble:	#ea4c89;
+	$linkedin:	#0977b5;
+	$twitter:	#2daae2;
+	$behance:	#1769FF;
+
+
+// Fonts
+// ================================================
+	$sans: sans-serif;
+
+// Utilities
+// ================================================
+	.element-invisible,
+	.screen-reader-text {
+		display: none;
+	}
+
+	@mixin clearfix {
+		*zoom: 1;
+		&:before,
+		&:after {
+			display: table;
+			content: "";
+		}
+		&:after {
+			clear: both;
+		}
+	}
+	
+	@mixin hide-text {
+		text-indent: -9999em;
+		white-space: nowrap;
+		line-height: 0; 
+	    font-size: 0;
+	    color: transparent; 
+	}

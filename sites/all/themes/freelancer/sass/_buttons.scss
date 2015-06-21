@@ -1,0 +1,48 @@
+.btn {
+	background: transparent;
+	text-decoration: none;
+	border: 2px solid $grey;
+	font-weight: 900;
+	cursor: pointer;
+	font-family: $sans;
+	font-size: 1em;
+	@include border-radius(2px);
+	float: left;
+	padding: 0 0.75em;
+	line-height: 1.75em;
+	color: darken(white, 40%);
+	&:hover {
+		border-color: $base;
+		color: $base;
+	}
+	&.dribbble:hover { color: $dribbble; border-color: $dribbble; }
+	&.linkedin:hover { color: $linkedin; border-color: $linkedin; }
+	&.behance:hover { color: $behance; border-color: $behance; }
+	&.twitter:hover { color: $twitter; border-color: $twitter; }
+}
+
+.btn-2 {
+	color: $grey;
+	padding: 0;
+	&:hover {
+		color: $link;
+	}
+	display: block;
+	border: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-size: 0.75em;
+}
+
+.btn-submit {
+	@extend .btn;
+	color: $base;
+	border-color: $base;
+	&:hover {
+		color: $link;
+		border-color: $link;
+	}
+}
+.btn-action {
+	@extend .btn-2
+}

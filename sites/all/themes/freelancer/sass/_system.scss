@@ -1,0 +1,29 @@
+// Messages
+// ------------
+.system-messages {
+	padding: 0.75em;
+	border: 2px solid $grey;
+	color: $grey;
+	margin: 1em 0;
+	font-weight: 900;
+	@include border-radius(2px);
+}
+
+// Tabs
+// ------------
+ul.tabs {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 3%;
+	li {
+		float: left;
+		margin-left: 1em;
+		&.active {
+			display: none;
+		}
+	}
+	a {
+		@extend .btn-2;
+	}
+}

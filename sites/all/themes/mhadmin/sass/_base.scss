@@ -1,0 +1,86 @@
+// Colors
+// ================================================
+	$black:		#212121;
+
+	$banner:	#3c4e5a;
+	// $banner:	lighten($black, 10%);
+
+	$link:		#3887be;	
+	$hover:		#3bb2d0;
+	// $link:		#996633;
+	// $hover:		darken($link, 10%);
+
+	$banner_link:			$link;
+	$banner_link_hover:		$hover;
+
+	$alt:		#8889cc;
+	$alt-hover:	#bd93e5;
+
+	$table:		#f8f8f8;
+	
+	$green:		#18BE47;
+
+// Fonts
+// ================================================
+	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+	$sans:				'Open Sans', sans-serif;
+
+// Utilities
+// ================================================
+	@mixin clearfix {
+		*zoom: 1;
+		&:before,
+		&:after {
+			display: table;
+			content: "";
+		}
+		&:after {
+			clear: both;
+		}
+	}
+	
+	@mixin hide-text {
+		text-indent: -9999em;
+		white-space: nowrap;
+		line-height: 0; 
+	    font-size: 0;
+	    color: transparent; 
+	}
+
+// Fonts Icons
+// ================================================
+	@font-face {
+		font-family: 'icomoon';
+		src:url('../fonts/icomoon.eot');
+		src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/icomoon.woff') format('woff'),
+			url('../fonts/icomoon.ttf') format('truetype'),
+			url('../fonts/icomoon.svg#icomoon') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@mixin font-icon($name) {
+		font-family: 'icomoon';
+		content: '#{$name}';
+		speak: none;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+	}
+
+// /* Use the following CSS code if you want to use data attributes for inserting your icons */
+// [data-icon]:before {
+// 	font-family: 'icomoon';
+// 	content: attr(data-icon);
+// 	speak: none;
+// 	font-weight: normal;
+// 	font-variant: normal;
+// 	text-transform: none;
+// 	line-height: 1;
+// 	-webkit-font-smoothing: antialiased;
+// }
+
+

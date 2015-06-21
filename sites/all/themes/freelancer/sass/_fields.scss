@@ -1,0 +1,247 @@
+#edit-delete {
+	&:hover {
+		color: $red;
+		border-color: $red;
+	}
+}
+
+// Date Picker
+.ui-datepicker {
+	border: 1px solid $lightgrey;
+	@include border-radius(2px);
+	background: white;
+	.ui-datepicker-header a {
+		border: 0;
+		top: 0;
+		display: block;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -2px;
+			margin-left: -7px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+		}
+		&.ui-datepicker-next {
+			right: 0;
+			&:before {
+				border-width: 7px 0 7px 11px;
+				border-color: transparent transparent transparent $base;
+			}
+			&:hover {
+				&:before {
+					border-color: transparent transparent transparent $link;	
+				}
+			}
+		}
+		&.ui-datepicker-prev {
+			left: 0;
+
+			&:before {
+				border-width: 7px 11px 7px 0;
+				border-color: transparent $base transparent transparent;
+			}
+			&:hover {
+				&:before {
+					border-color: transparent $link transparent transparent;
+				}
+			}
+		}
+	}
+	select.ui-datepicker-month {
+		margin-right: 2px;
+	}
+	select.ui-datepicker-year {
+		margin-left: 2px;
+	}
+}
+
+// Fields
+// ------------
+.field_hours_ammount,
+.field_item_ammount {
+	width: 100px;
+}
+.views-field-delete-node,
+.views-field-edit-node,
+.views-field-clone-node {
+	a {
+		@extend .btn-2;
+		text-decoration: none;
+		float: left;
+		margin-right: 10px;
+	}
+}
+.view-invoices {
+	.No {
+		.views-field-field-invoice-status {
+			color: $red;
+		}
+	}
+}
+
+// Date Fieldset
+#field-invoice-date-add-more-wrapper {
+	legend {
+		display: none;
+	}
+}
+
+// Auto Complete
+#autocomplete {
+	position: absolute;
+	top: 35px;
+	left: 0;
+	// padding: 0.25em;
+	background: white;
+	width: 100%;
+	border: 1px solid $lightgrey;
+	@include box-sizing(border-box);
+	div {
+		padding: 0.25em;
+		cursor: pointer;
+		&.active,
+		&:hover {
+			background: darken(white, 10%);
+		}
+	}
+	li.selected {
+		background: darken(white, 10%);
+	}
+}
+
+// Field Collections
+a.tabledrag-handle {
+	padding: 0 !important;
+	display: inline-block;
+	.handle {
+		&:before {
+			content: '\2591';
+		}
+	}
+}
+.tabledrag-changed-warning  {
+	@extend p;
+	color: $grey;
+}
+.field-type-field-collection {
+	margin: 2em 0;
+	@include clearfix;
+	vertical-align: top;
+	.form-item {
+		margin: 0;
+	}
+	
+	.form-wrapper {
+		float: left;
+		margin-right: 1em;
+		label {
+			margin-bottom: 0.5em;
+		}
+	}
+	table {
+		.even {
+			background: transparent;
+		}
+		.drag-previous,
+		.drag {
+			background: darken(white, 5%);
+		}
+		margin-bottom: 0.75em;
+	}
+	tr {
+		border-bottom: 1px solid $base;
+	}
+	td {
+		padding: 0.5em 0;
+		// padding: 5px 0;
+		input[type="submit"] {
+			margin-top: 1.5em;
+			@extend .btn-2;
+			padding: 0;
+		}
+	}
+
+	input[type="text"] {
+		width: 80px;
+	}
+	input[type="submit"] {
+		margin-right: 0.5em;
+	}
+
+	textarea {
+		width: auto;
+		max-width: 200px;
+	}
+	.sticky-header {
+		display: none;
+		position: static;
+	}
+}
+form .field-multiple-table th.field-label {
+	padding: 0.5em;
+}
+
+// Text Formats
+.text-format-wrapper {
+	margin: 1em 0;
+	textarea {
+		@include border-radius(2px 2px 0 0);
+		border-bottom: 0;
+	}
+	.form-type-textarea {
+		margin: 0;
+	}
+	.filter-wrapper {
+		margin-top: -2px;
+		border-left: 1px solid $lightgrey;
+		border-right: 1px solid $lightgrey;
+		border-bottom: 1px solid $lightgrey;
+		background: darken(white, 10%);
+		padding: 0 1em;
+	}
+}
+.tabledrag-toggle-weight-wrapper,
+.tips, 
+.vertical-tabs,
+.filter-help {
+	display: none;
+}
+
+// Views
+.views-exposed-form {
+	padding: 1em 1em 0 1em;
+	background: darken(white, 10%);
+	@include clearfix;
+	.form-item {
+		margin: 0;
+	}
+}
+.views-exposed-widget {
+	float: left;
+	margin-bottom: 1em;
+	margin-right: 1em;
+}
+.views-reset-button {
+	width: 100%;
+	input {
+		@extend .btn-2;
+		color: $grey;
+	}
+}
+.views-submit-button {
+	margin-top: 1.45em;
+}
+@media all and (max-width: 760px) {
+	.views-exposed-widget {
+		width: 100%;
+		margin-bottom: 1em;
+		margin-right: 0;
+	}
+	.views-submit-button  {
+		margin-top: 0;
+	}
+}

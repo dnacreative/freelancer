@@ -1,0 +1,503 @@
+// Insignificant change
+@import "compass/css3";
+@import "base";
+
+// General
+// ================================================
+	body {
+		font-family: $sans;
+		font-size: .875em;
+	}
+	h1 {
+		font-size: 3em;
+		font-weight: 700;
+		line-height: 1.2em;
+		margin: 1em 0;
+	}
+	h2 {
+		font-size: 2em;
+		font-weight: 700;
+		line-height: 1.2em;
+		margin: 1em 0;
+	}
+	h3 {
+		font-weight: 700;
+		line-height: 1.2em;
+		margin: 1em 0;
+	}
+	p {
+		margin: 2em 0;
+		line-height: 1.5em;
+	}
+	hr {
+		border: 0;
+		border-bottom: 1px solid rgba(0,0,0,0.2);
+		margin: 2em 0;
+	}
+	a,
+	a.launcher {
+		color: $link;
+		&:hover {
+			color: $hover;
+			text-decoration: none;
+		}
+	}
+	
+// Toolbar
+// ================================================
+	#toolbar {
+		font-family: $sans;
+		// min-width: 960px;
+		@include box-shadow(0 0 0 0);
+		div.toolbar-menu ul li a {
+			@include border-radius(2px);
+			margin: 0 2px;
+			&.active {
+				background: darken(white, 50%);
+				&:hover {
+					background: darken(white, 40%);	
+				}
+			}
+		}
+		div.toolbar-menu ul li.active-trail a {
+			background: darken(white, 50%);
+			&:hover {
+				background: darken(white, 40%);	
+			}
+		}
+		.home a {
+			position: relative;
+			// background: pink;
+			span {
+				background: transparent;
+			}
+			&:before {
+				@include font-icon(\e000);
+				font-size: 13px;
+				color: white;
+				position: absolute;
+				top: 3px;
+				left: 9px;
+			}
+		}
+	}
+
+// Forms
+// ================================================
+	// Text
+	input[type=text] {
+		border: 1px solid darken(white, 10%);
+		outline: none;
+		font-family: $sans;
+		font-size: .875em;
+		padding: 5px;
+		// margin: 5px 0;
+	}
+
+	// Password
+	input[type=password] {
+		@extend input[type=text];
+	}
+
+	// Textarea
+	textarea.form-textarea {
+		@extend input[type=text];
+	}
+
+	// File
+	input[type=file] {
+		border: 0;
+	}
+
+	// Tags
+	html.js input.form-autocomplete {
+		background-position: 99% 8px;
+	}
+	html.js input.form-autocomplete.throbbing {
+		background-position: 99% -13px;
+	}
+
+// Header
+// ================================================
+	// Branding
+	#branding {
+		padding: 20px 20px 0 20px;
+		position: relative;
+		background: $banner;
+		// min-width: 960px;
+		h1.page-title {
+			font-weight: 300;
+			font-size: 1.5em;
+			color: white;
+			text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+		}
+		.breadcrumb {
+			a {
+				color: $banner_link;
+				&:hover {
+					color: $banner_link_hover;
+				}
+			}	
+		}
+	}
+	// Tabs
+	ul.tabs.primary {
+		position: absolute;
+		right: 40px;
+		bottom: 0px;
+		li {
+			margin: 0 0 0 10px;
+			a {
+				@include border-radius(2px);
+				border-width: 0;
+				color: rgba(0,0,0, 0.8);
+				background: rgba(255,255,255,0.3);
+				text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+				&.active {
+					color: black;
+					&:hover {
+						background: white;
+						color: black;
+					}
+				}
+				&:hover {
+					// color: white;
+					background: rgba(255,255,255,0.6);
+				}
+			}
+		}		
+	}
+	ul.tabs.secondary {
+		li {
+			a {
+				background: darken(white, 10%);
+				@include border-radius(10px);
+				&:hover {
+					background: darken(white, 30%);
+					color: black;
+				}
+			}
+			&.active {
+				a {
+					background: darken(white, 60%);
+					@include border-radius(10px);
+					&:hover {
+						background: darken(white, 80%);
+						color: white;
+					}
+				}
+			}
+		}		
+	}
+	// Breadcrumb
+	.breadcrumb {
+		color: darken(white, 50%);
+		color: rgba(0,0,0, 0.3);
+	}
+
+// Page
+// ================================================
+	#page {
+		// min-width: 960px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+// Table
+// ================================================
+	table {
+		border-color: darken(white, 30%);
+		@include border-radius(4px !important);
+		th {
+			background: darken(white, 20%);
+			border-color: darken(white, 30%);
+		}
+		th.active {
+			background: darken(white, 25%);
+			border-color: darken(white, 30%);
+		}
+		.odd {
+			border-color: darken(white, 30%);
+		}
+		.even {
+			background: $table;
+			border-color: darken(white, 30%);
+		}
+	}
+
+// Buttons
+// ================================================
+	input.form-submit, 
+	a.button {
+		border: 0;
+		@include border-radius(3px);
+		color: white !important;
+		background: $link;
+		text-shadow: 0 -1px 0 rgba(0,0,0, .2);
+		padding: 0.5em 1em;
+		font-size: .875em;
+		&:hover {
+			color: white;
+			background: $hover;
+		}
+	}
+
+// Icons
+// ================================================
+	// Settings
+	#field-display-overview input.field-formatter-settings-edit {
+		background: transparent;
+	}
+	// Support
+	a.module-link-help {
+		background: transparent;
+		position: relative;
+		padding-left: 20px;
+		&:before {
+			@include font-icon(\e001);
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 5px;
+			color: darken(white, 30%);
+		}
+	}
+	// Info
+	.filter-help a {
+		background: transparent;
+		position: relative;
+		// padding-left: 20px;
+		&:before {
+			@include font-icon(\e001);
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 3px;
+			color: darken(white, 30%);
+		}
+	}
+	// Key
+	a.module-link-permissions {
+		@extend a.module-link-help;
+		&:before {
+			@include font-icon(\e002);
+		}
+	}
+	// Cogs
+	a.module-link-configure {
+		@extend a.module-link-help;
+		&:before {
+			@include font-icon(\e003);
+		}
+	}
+	// Move
+	a.tabledrag-handle .handle {
+		background: transparent;
+		&:before {
+			@include font-icon(\e004);
+			color: darken(white, 40%);
+			position: relative;
+			top: 1px;
+		}		
+	}
+	// Plus
+	ul.action-links a {
+		background: transparent;
+		padding-left: 20px;
+		position: relative;
+		&:before {
+			position: absolute;
+			@include font-icon(\e005);
+			top: 4px;
+			left: 0
+		}		
+	}
+	// List
+	ul.admin-list li {
+		background: transparent;
+		position: relative;
+		border: 0;
+		border-bottom: 1px solid #ccc;
+		padding-top: 0;
+		margin-bottom: 0;
+		padding-bottom: 9px;
+		margin-top: 10px;
+		&:before {
+			position: absolute;
+			@include font-icon(\e006);
+			color: darken(white, 30%);
+			top: 4px;
+			left: 6px;
+		}	
+	}
+	// Down Arrow
+	html.js fieldset.collapsible .fieldset-legend {
+		background: transparent;
+		padding-left: 20px;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 5px;
+			top: 8px;
+			width: 0; 
+			height: 0; 
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 5px solid darken(white, 30%);
+		}
+	}
+	// Close 
+	#overlay-close {
+		background: transparent;
+		background: white;
+		@include border-radius(0 100px 100px 0);
+		position: relative;
+		right: -26px;
+		&:before {
+			@include font-icon(\e007);
+			display: block;
+			position: absolute;
+			left: 5px;
+			top: 5px;
+			font-size: 16px;
+			color: $link;
+		}
+		&:hover {
+			@extend #overlay-close;
+			&:before {
+				color: $hover;
+			}
+		}
+	}
+
+// Logo Banner
+// ================================================
+	#footer-logo {
+		margin-top: 40px;
+		padding-bottom: 40px;
+	}
+
+// Messages
+// ================================================
+	div.messages,
+	div.message {
+		padding-left: 40px;
+		position: relative;
+	}
+	div.status {
+		background: transparent;
+		background-color: #f8fff0;
+		position: relative;
+		&:before {
+			@include font-icon('\e00b');
+			position: absolute;
+			top: 13px;
+			left: 15px;
+			color: #be7;
+		}
+	}
+	div.error {
+		background: transparent;
+		background-color: #fef5f1;
+		&:before {
+			@include font-icon('\e00c');
+			position: absolute;
+			top: 14px;
+			left: 15px;
+			color: #ed541d;
+		}
+	}
+	div.warning {
+		background: transparent;
+		background-color: #fffce5;
+		&:before {
+			@include font-icon('\e00a');
+			position: absolute;
+			top: 13px;
+			left: 18px;
+			color: #ed5;
+		}
+	}
+
+// Modules
+// ================================================
+	// MEDIA
+	#edit-field-media,
+	.field-multiple-table{
+		.field-label {
+			label {
+				margin-left: 10px;
+			}
+		}
+		a.launcher,
+		a.button,
+		a.button:link, a.button:visited, a.button:hover, a.button:active {
+			color: white !important;
+			&:hover {
+				color: white !important;
+			}
+		}
+	}
+	#media-browser-page {
+		h1 {
+			font-size: 1.5em;
+			color: white;
+		}
+		.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+			color: $black;
+			background: white;
+		}
+	}
+	.media-browser-tab.ui-tabs-panel {
+		border: 0;
+	}
+	#media-browser-tabset #branding h1 {
+		line-height: 35px;
+		font-weight: 300;
+		font-style: italic;
+		margin-left: 10px;
+	}
+
+	// CTOOLS MODAL
+	div.ctools-modal-content .modal-title {
+		font-weight: 300;
+	}
+	div.ctools-modal-content .modal-header {
+		background-color: $banner;
+		padding: 5px 15px;
+		.close {
+			position: relative;
+			font-size: 0.875em;
+			// top: 3px;
+			img {
+				display: none;
+			}
+			padding-right: 20px;
+			&:hover {
+				text-decoration: underline;
+			}
+			&:before {
+				@include font-icon('\e00c');
+				position: absolute;
+				top: 4px;
+				right: 0;
+				color: white;
+			}
+		}
+	}
+
+
+	// TOKEN
+	.token-tree {
+		.token-group {
+			td {
+				padding-left: 22px;
+				// span {
+				// 	margin-left: -14px !important;
+				// }
+			}
+		}
+	}
+
+

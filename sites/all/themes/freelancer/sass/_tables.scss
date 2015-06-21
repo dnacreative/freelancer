@@ -1,0 +1,43 @@
+// Tables
+// ------------
+table {
+	margin: 1em 0;
+	width: 100%;
+	a {
+		border: 0;
+		img {
+			margin-left: 0.25em;
+		}
+	}
+	.even {
+		background: darken(white, 5%);
+	}
+	label {
+		margin: 0;
+	}
+}
+th {
+	font-weight: 900;
+	padding: 0.5em;
+	border-bottom: 2px solid $base;
+	background: darken(white, 10%);
+	&.active {
+		background: darken(white, 15%);
+	}
+}
+td {
+	vertical-align: top;
+	padding: 0.5em;
+	&.active {
+		padding:0.5em;
+		background: darken(white, 5%);
+	}
+	.even & {
+		&.active {
+			background: darken(white, 10%);		
+		}
+	}
+	.form-item {
+		margin: 0;
+	}
+}

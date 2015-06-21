@@ -1,0 +1,1 @@
+This is a sub theme of seven to make the Drupal backend look proffesional. 

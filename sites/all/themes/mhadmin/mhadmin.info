@@ -1,0 +1,8 @@
+name = MH Admin
+description = A better version of Seven
+base theme = seven
+package = Core
+version = VERSION
+core = 7.x
+stylesheets[all][] = stylesheets/screen.css
+stylesheets[print][] = stylesheets/print.css

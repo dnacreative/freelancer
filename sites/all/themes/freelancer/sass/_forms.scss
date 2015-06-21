@@ -1,0 +1,62 @@
+// Forms
+// ------------
+form {
+	margin: 1em 0;
+}
+label {
+	font-weight: bold;
+	display: block;
+	margin-bottom: 0.6em;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+	max-width: 480px;
+	background: white;
+	width: 100%;
+	@include border-radius(2px);
+	border: 1px solid $lightgrey;
+	font-family: $sans;
+	font-size: 1em;
+	padding: 5px;
+	line-height: 1em;
+	@include box-sizing(border-box);
+}
+textarea {
+	max-width: none;
+	padding: 0.5em;
+	line-height: 1.5em;
+	height: auto;
+	display: block;
+}
+input[type="submit"] {
+	@extend .btn-submit;
+}
+input[type="checkbox"] {
+	float: left;
+	margin-right: 0.5em;
+}
+.fieldset-legend {
+	font-weight: bold;
+}
+.form-item {
+	margin: 1em 0;
+	// max-width: 50%;
+}
+.form-required,
+.warning {
+	color: $red;
+}
+.description {
+	margin-top: 0.5em;
+	color: $grey;
+}
+.form-actions {
+	margin: 3em 0;
+	input {
+		display: block;
+		width: auto;
+		margin-right: 1em;
+		margin-bottom: 1em;
+	}
+}

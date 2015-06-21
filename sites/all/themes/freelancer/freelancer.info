@@ -1,0 +1,7 @@
+name = Freelancer
+description = A invoicing theme for Mitchell Hillman
+package = Core
+version = VERSION
+core = 7.x
+stylesheets[all][] = css/styles.css
+stylesheets[print][] = css/print.css
